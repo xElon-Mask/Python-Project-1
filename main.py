@@ -2,6 +2,15 @@
 Formation Python
 Apprendre la programmation """
 
+#afficher_informations_personne
+# Paramètres : nom, age
+
+def afficher_informations_personne(nom, age):
+    print("Vous vous appelez " + nom + ", vous avez " + str(age) + " ans")
+    print("L'an prochain vous aurez " + str(age+1) + " ans")
+
+
+
 
 def demander_nom():
     reponse_nom = ""
@@ -9,10 +18,10 @@ def demander_nom():
         reponse_nom = input("Quel est votre nom ?")
     return reponse_nom
 
-def demander_age():
+def demander_age(nom_personne):
     age_int = 0
     while age_int == 0:
-        age_str = input("Quel est votre age ?")
+        age_str = input(nom_personne + " Quel est votre age ?")
         try:
             age_int = int(age_str)
         except:
@@ -20,11 +29,13 @@ def demander_age():
     return age_int
 
 # demander le nom
-nom = demander_nom()
+nom1 = demander_nom()
+nom2 = demander_nom()
 
 
 # demander l'age
-age = demander_age()
+age1 = demander_age(nom1)
+age2 = demander_age(nom2)
 
 
 """"try veut dire essayer en anglais, 
@@ -35,7 +46,13 @@ Pour éviter la suite des instructions après avoir pris l'exception, il faut pa
 while veut dire "tant que" """
 
 # afficher les résultats
-print("Vous vous appelez " + nom + ", vous avez " + str(age) + " ans")
+"""
+print("Vous vous appelez " + nom1 + ", vous avez " + str(age1) + " ans")
 # ceci est un commentaire en Python
-print("L'an prochain vous aurez " + str(age+1) + " ans")
+print("L'an prochain vous aurez " + str(age1+1) + " ans")
 
+print("Vous vous appelez " + nom2 + ", vous avez " + str(age2) + " ans")
+print("L'an prochain vous aurez " + str(age2+1) + " ans")"""
+
+afficher_informations_personne(nom1, age1)
+afficher_informations_personne(nom2, age2)
