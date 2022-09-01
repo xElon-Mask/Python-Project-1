@@ -3,6 +3,12 @@ Formation Python
 Apprendre la programmation """
 
 
+def demander_nom():
+    reponse_nom = ""
+    while reponse_nom == "":
+        reponse_nom = input("Quel est votre nom ?")
+    return reponse_nom
+
 def demander_age():
     age_int = 0
     while age_int == 0:
@@ -14,9 +20,8 @@ def demander_age():
     return age_int
 
 # demander le nom
-nom = ""
-while nom == "":
-    nom = input("Quel est votre nom ?")
+nom = demander_nom()
+
 
 # demander l'age
 age = demander_age()
