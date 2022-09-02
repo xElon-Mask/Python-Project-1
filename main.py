@@ -8,6 +8,7 @@ Apprendre la programmation """
 def afficher_informations_personne(nom, age, taille=0):
     print()
     print("Vous vous appelez " + nom + ", vous avez " + str(age) + " ans")
+    print(f"Vous vous appelez {nom}, vous avez {age} ans")
     print("L'an prochain vous aurez " + str(age+1) + " ans")
 
 # rajouter condition si age > 60 : Vous êtes sénior
