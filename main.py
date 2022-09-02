@@ -14,6 +14,10 @@ def afficher_informations_personne(nom, age):
 # age < 10 : Vous êtes enfant
     if age == 17:
         print("Vous êtes presque majeur")
+    elif 12 <= age < 18:
+        print("Vous êtes adolescent")
+    elif age == 1 or age == 2:
+        print("Vous êtes un bébé")
     elif age == 18:
         print("Tout juste majeur: Félicitiations !")
     elif age > 60:
@@ -45,13 +49,13 @@ def demander_age(nom_personne):
     return age_int
 
 # demander le nom
-nom1 = demander_nom()
-nom2 = demander_nom()
+#nom1 = demander_nom()
+#nom2 = demander_nom()
 
 
 # demander l'age
-age1 = demander_age(nom1)
-age2 = demander_age(nom2)
+#age1 = demander_age(nom1)
+#age2 = demander_age(nom2)
 
 
 """"try veut dire essayer en anglais, 
@@ -70,5 +74,13 @@ print("L'an prochain vous aurez " + str(age1+1) + " ans")
 print("Vous vous appelez " + nom2 + ", vous avez " + str(age2) + " ans")
 print("L'an prochain vous aurez " + str(age2+1) + " ans")"""
 
-afficher_informations_personne(nom1, age1)
-afficher_informations_personne(nom2, age2)
+#afficher_informations_personne(nom1, age1)
+#afficher_informations_personne(nom2, age2)
+
+NB_PERSONNES  = 5
+
+# la boucle for
+for i in range(0, NB_PERSONNES):
+    nom = "personne" + str(i+1)
+    age = demander_age(nom)
+    afficher_informations_personne(nom, age)
