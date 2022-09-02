@@ -5,7 +5,7 @@ Apprendre la programmation """
 #afficher_informations_personne
 # Paramètres : nom, age
 
-def afficher_informations_personne(nom, age):
+def afficher_informations_personne(nom, age, taille=0):
     print()
     print("Vous vous appelez " + nom + ", vous avez " + str(age) + " ans")
     print("L'an prochain vous aurez " + str(age+1) + " ans")
@@ -29,7 +29,9 @@ def afficher_informations_personne(nom, age):
     else:
         print("Vous êtes mineur")
 
-
+# afficher la taille
+    if not taille == 0:
+        print("Votre taille : " + str(taille) + " m")
 
 
 def demander_nom():
@@ -77,7 +79,7 @@ print("L'an prochain vous aurez " + str(age2+1) + " ans")"""
 #afficher_informations_personne(nom1, age1)
 #afficher_informations_personne(nom2, age2)
 
-NB_PERSONNES  = 5
+NB_PERSONNES  = 1
 
 # la boucle for
 for i in range(0, NB_PERSONNES):
